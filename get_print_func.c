@@ -16,6 +16,7 @@ int (*get_print_func(char s))(va_list)
 		{'s', print_s},
 		{'d', print_signed},
 		{'i', print_signed},
+		{'b', print_b},
 		{'\0', NULL}
 	};
 

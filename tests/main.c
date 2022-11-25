@@ -55,5 +55,6 @@ int main(void)
 
 	_printf("%d\n", INT_MAX);
 	printf("%d\n", INT_MAX);
+	_printf("%b\n", 17);
 	return (0);
 }
