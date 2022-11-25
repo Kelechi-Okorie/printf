@@ -58,11 +58,11 @@ int count_digits(int num)
  */
 void print_num(int num)
 {
-	int n;
+	unsigned int n;
 	if (num < 0)
 	{
 		_putchar('-');
-		n = num * -1;
+		n = -num;
 	}
 	else
 		n = num;
