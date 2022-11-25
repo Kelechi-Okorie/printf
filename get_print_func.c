@@ -14,8 +14,8 @@ int (*get_print_func(char s))(va_list)
 	pf_t funcs[] = {
 		{'c', print_c},
 		{'s', print_s},
-		{'d', print_num},
-		{'i', print_num},
+		{'d', print_signed},
+		{'i', print_signed},
 		{'\0', NULL}
 	};
 

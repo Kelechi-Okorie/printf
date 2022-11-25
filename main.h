@@ -21,7 +21,7 @@ typedef struct printFunc
 
 int print_c(va_list ap);
 int print_s(va_list ap);
-int print_num(va_list ap);
+int print_signed(va_list ap);
 
 int (*get_print_func(char s))(va_list ap);
 
