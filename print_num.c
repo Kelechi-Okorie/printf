@@ -25,6 +25,20 @@ int print_signed(va_list ap)
 }
 
 /**
+ * print_unsigned - prints an unsigned integer
+ * @ap: argument pointer
+ *
+ * Return: number of chars printed
+ */
+int print_unsigned(va_list ap)
+{
+	unsigned int num = va_arg(ap, unsigned int);
+	char *str = converter(num, 10, 0);
+
+	return (_puts(str));
+}
+
+/**
  * count_digits - counts the number of digits in an integer
  * @num: integer to count
  *
@@ -66,7 +80,9 @@ void print_num(int num)
 		n = -num;
 	}
 	else
+	{
 		n = num;
+	}
 
 	if (n / 10)
 		print_num(n / 10);

@@ -7,6 +7,7 @@
 int _putchar(char c);
 int _puts(char *str);
 int _printf(const char *format, ...);
+char *converter(unsigned long int num, int base, int lowercase);
 
 /**
  * struct printFunc - A structure of format and associated function
@@ -23,6 +24,10 @@ int print_c(va_list ap);
 int print_s(va_list ap);
 int print_signed(va_list ap);
 int print_b(va_list ap);
+int print_unsigned(va_list ap);
+int print_hex(va_list ap);
+int print_hex_big(va_list ap);
+int print_octal(va_list ap);
 
 int (*get_print_func(char s))(va_list ap);
 

@@ -17,6 +17,10 @@ int (*get_print_func(char s))(va_list)
 		{'d', print_signed},
 		{'i', print_signed},
 		{'b', print_b},
+		{'u', print_unsigned},
+		{'o', print_octal},
+		{'x', print_hex},
+		{'X', print_hex_big},
 		{'\0', NULL}
 	};
 
