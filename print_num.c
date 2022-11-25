@@ -32,8 +32,8 @@ int print_signed(va_list ap)
  */
 int count_digits(int num)
 {
-	int count;
-	int n;
+	unsigned int count;
+	unsigned int n;
 
 	count = 0;
 	if (num < 0)

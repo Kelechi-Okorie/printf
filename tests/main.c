@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "../main.h"
 
+#include <limits.h>
+
 /**
  * main - Entry point
  *
@@ -50,5 +52,8 @@ int main(void)
 	_printf("=============================\n");
 	_printf("%%%%%%%%\n");
 	printf("%%%%%%%%\n");
+
+	_printf("%d\n", INT_MAX);
+	printf("%d\n", INT_MAX);
 	return (0);
 }
