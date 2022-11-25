@@ -11,7 +11,7 @@ int print_b(va_list ap)
 	unsigned int num;
 	int n;
 	char buf[50];
-	 
+
 	num = va_arg(ap, unsigned int);
 	n = 49;
 	buf[n] = '\0';
@@ -23,4 +23,4 @@ int print_b(va_list ap)
 	}
 
 	return (_puts(&buf[n]));
-}	
+}

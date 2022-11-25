@@ -25,7 +25,7 @@ int print_signed(va_list ap)
 }
 
 /**
- * countd_digits - counts the number of digits in an integer
+ * count_digits - counts the number of digits in an integer
  * @num: integer to count
  *
  * Return: number of digits in integer @num
@@ -51,7 +51,7 @@ int count_digits(int num)
 }
 
 /**
- * print_numb - prints a given number
+ * print_num - prints a given number
  * @num: the number to print
  *
  * Return: Always void;
@@ -59,6 +59,7 @@ int count_digits(int num)
 void print_num(int num)
 {
 	unsigned int n;
+
 	if (num < 0)
 	{
 		_putchar('-');
