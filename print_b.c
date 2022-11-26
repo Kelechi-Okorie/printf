@@ -9,18 +9,11 @@
 int print_b(va_list ap)
 {
 	unsigned int num;
-	int n;
-	char buf[50];
+	char *str;
 
 	num = va_arg(ap, unsigned int);
-	n = 49;
-	buf[n] = '\0';
+	str = converter(num, 2, 0);
 
-	while (num != 0)
-	{
-		buf[--n] = (num % 2) + '0';
-		num /= 2;
-	}
 
-	return (_puts(&buf[n]));
+	return (_puts(str));
 }
