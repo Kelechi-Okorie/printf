@@ -14,7 +14,7 @@ int print_hex(va_list ap)
 
 	num = va_arg(ap, unsigned int);
 	str = converter(num, 16, 1);
-	count =0;
+	count = 0;
 
 	count += _puts("0x");
 	count += _puts(str);
@@ -34,8 +34,8 @@ int print_hex_big(va_list ap)
 	char *str;
 	int count;
 
-	num = va_arg(ap , unsigned int);
-	str = converter(num, 16, 1);
+	num = va_arg(ap, unsigned int);
+	str = converter(num, 16, 0);
 	count = 0;
 
 	count += _puts("0X");

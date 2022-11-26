@@ -6,7 +6,7 @@
  * @base: base of the number
  * @lowercase: flag to indicate is hex is lower or upper
  *
- * REturn: result string to return
+ * Return: result string to return
  */
 char *converter(unsigned long int num, int base, int lowercase)
 {
