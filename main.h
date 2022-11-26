@@ -28,6 +28,7 @@ int print_unsigned(va_list ap);
 int print_hex(va_list ap);
 int print_hex_big(va_list ap);
 int print_octal(va_list ap);
+int print_p(va_list ap);
 
 int (*get_print_func(char s))(va_list ap);
 
