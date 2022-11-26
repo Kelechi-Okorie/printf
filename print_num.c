@@ -6,16 +6,22 @@ int count_digits(int num);
 /**
  * print_signed - prints integers for format d and i
  * @ap: argument pointer
+ * @f: flags for printing
  *
  * Return: number of chars printed
  */
-int print_signed(va_list ap)
+int print_signed(va_list ap, flags_t *f)
 {
 	int num;
 	int count;
 
 	num = va_arg(ap, int);
 	count = count_digits(num);
+
+	if (f->space == 1 && f->plus == 0 && num >= 0)
+		count  += _putchar(' ');
+	if (f->plus == 1 && num >= 0)
+		count += _putchar('+');
 
 	if (num <= 0)
 		count++;
@@ -27,13 +33,16 @@ int print_signed(va_list ap)
 /**
  * print_unsigned - prints an unsigned integer
  * @ap: argument pointer
+ * @f: flags for printing
  *
  * Return: number of chars printed
  */
-int print_unsigned(va_list ap)
+int print_unsigned(va_list ap, flags_t *f)
 {
 	unsigned int num = va_arg(ap, unsigned int);
 	char *str = converter(num, 10, 0);
+
+	(void)f;
 
 	return (_puts(str));
 }

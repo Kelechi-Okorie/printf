@@ -9,7 +9,7 @@
  *
  * Return: pointer to the appropriate print function
  */
-int (*get_print_func(char s))(va_list)
+int (*get_print_func(char s))(va_list, flags_t *)
 {
 	pf_t funcs[] = {
 		{'c', print_c},
